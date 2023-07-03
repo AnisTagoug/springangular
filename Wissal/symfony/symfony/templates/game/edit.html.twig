@@ -1,0 +1,39 @@
+{% extends 'base-back.html.twig' %}
+{% block title %}Edit Game{% endblock %}
+
+{% block body %}
+    <div class="card">
+        {{ form_start(form) }}
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl-6  col-md-6 mb-4">
+                    <label class="form-label font-w600">Game Name<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.gameName,{'attr':{class: "form-control solid",placeholder:"Name"}}) }}
+                </div>
+                <div class="col-xl-6  col-md-6 mb-4">
+                    <label class="form-label font-w600">Game Link<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.gameLink,{'attr':{class: "form-control solid",placeholder:"Link"}}) }}
+                </div>
+                <div class="col-xl-6  col-md-6 mb-4">
+                    <label class="form-label font-w600">Game Image<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.gameImg,{'attr':{class: "btn btn-warning "}}) }}
+                </div>
+                <div class="col-xl-6  col-md-6 mb-4">
+                    <label class="form-label font-w600">Select a Category<span class="text-danger scale5 ms-2">*</span></label>
+
+                    {{ form_widget(form.idcategory,{'attr':{class: "form-select form-control solid"}}) }}
+                </div>
+                <div class="col-xl-12 mb-4">
+                    <label class="form-label font-w600">Description:<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.gameDescription,{'attr':{class: "form-control solid",placeholder:"Description"}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <div>
+                <input type="submit" class="btn btn-primary me-3" value="Save"/>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

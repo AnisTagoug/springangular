@@ -1,0 +1,137 @@
+<body class="">
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+  <div class="container-fluid">
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" href="../index.html">
+      <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+    </a>
+    <!-- User -->
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="../index.html">
+              <img src="../assets/img/brand/blue.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <form class="mt-4 mb-3 d-md-none">
+        <div class="input-group input-group-rounded input-group-merge">
+          <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="fa fa-search"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- Navigation  MODIFFFF-->
+      <app-navbar-admin></app-navbar-admin>
+      <!-- Divider -->
+      <!-- Heading -->
+      <!-- Navigation -->
+
+    </div>
+  </div>
+</nav>
+<div class="main-content">
+  <!-- Navbar -->
+
+
+  <div class="header bg-orange pb-8 pt-5 pt-md-8">
+  </div>
+
+  <div>
+    <!--FORM BEGIN-->
+
+      <div class="wrapper wrapper--w900" >
+        <div class="card card-6" style="margin-top:10px" >
+          <div class="card-heading">
+
+          </div>
+          <div class="container-fluid">
+            <div class="card-body">
+
+      <form [formGroup]="user" (ngSubmit)="addData()">
+        <div>
+          <label class="col-md-4 control-label" >Nom d'utilisateur</label>
+          <input formControlName="userName" class="form-control" type="text" placeholder="nom d'utlisateur">
+        </div>
+
+        <div *ngIf="user.controls.userName.invalid && user.controls.userName.touched">
+          <small *ngIf="user.controls.userName.errors?.['required']" class="text-danger"> username is required</small>
+        </div>
+
+        <div>
+          <label class="col-md-4 control-label" >Nom</label>
+          <input formControlName="nom" class="form-control" type="text" placeholder="nom">
+        </div>
+
+        <div *ngIf="user.controls.nom.invalid && user.controls.nom.touched">
+          <small *ngIf="user.controls.nom.errors?.['required']" class="text-danger"> nom is required</small>
+        </div>
+
+        <div>
+          <label class="col-md-4 control-label" >Prenom</label>
+          <input formControlName="prenom" class="form-control" type="text" placeholder="prenom">
+        </div>
+
+        <div *ngIf="user.controls.prenom.invalid && user.controls.prenom.touched">
+          <small *ngIf="user.controls.prenom.errors?.['required']" class="text-danger"> prenom is required</small>
+        </div>
+
+
+        <div>
+          <label class="col-md-4 control-label">Email</label>
+          <input formControlName="email" class="form-control" type="text" placeholder="kaddem@example.com">
+        </div>
+
+        <div *ngIf="user.controls.email.invalid && user.controls.email.touched">
+          <small *ngIf="user.controls.email.errors?.['required']" class="text-danger">email is required</small>
+        </div>
+
+        <div>
+          <label class="col-md-4 control-label" >Password</label>
+          <input formControlName="password" class="form-control" type="text" placeholder="password">
+        </div>
+
+
+        <div *ngIf="user.controls.password.invalid && user.controls.password.touched">
+          <small *ngIf="user.controls.password.errors?.['required']" class="text-danger">password is required</small>
+        </div>
+
+        <button style="margin-top: 10px;margin-left:120px;width:40%" class="btn btn-warning"><i class="fa-solid fa-person-circle-plus" style="margin-right: 10px"></i>Enregistrer</button>
+
+      </form>
+    </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <!--FORM END-->
+
+
+
+
+  </div>
+
+</div>
+
+</body>

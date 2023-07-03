@@ -1,0 +1,52 @@
+{
+  "npmScope": "payment",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+   
+    "confledis": {
+      "tags": []
+    },
+    "confledis-e2e": {
+      "tags": [],
+      "implicitDependencies": ["confledis"]
+    },
+    "lib-name": {
+      "tags": []
+    },
+    "my-app": {
+      "tags": []
+    },
+    "my-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["my-app"]
+    },
+    "my-lib": {
+      "tags": []
+    }
+  }
+}

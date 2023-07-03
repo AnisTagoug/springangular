@@ -1,0 +1,26 @@
+{% extends 'base-back.html.twig' %}
+{% block title %}Edit Category{% endblock %}
+
+{% block body %}
+    <div class="card">
+        {{ form_start(form) }}
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl-12 mb-4">
+                    <label class="form-label font-w600">Game Name<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.categoryName,{'attr':{class: "form-control solid",placeholder:"Name"}}) }}
+                </div>
+                <div class="col-xl-12 mb-4">
+                    <label class="form-label font-w600">Description:<span class="text-danger scale5 ms-2">*</span></label>
+                    {{ form_widget(form.discription,{'attr':{class: "form-control solid",placeholder:"Description"}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <div>
+                <input type="submit" class="btn btn-primary me-3" value="Save"/>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

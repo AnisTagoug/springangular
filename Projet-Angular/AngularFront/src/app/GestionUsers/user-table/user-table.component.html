@@ -1,0 +1,146 @@
+<body class="">
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+  <div class="container-fluid">
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" href="../index.html">
+      <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+    </a>
+    <!-- User -->
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="../index.html">
+              <img src="../assets/img/brand/blue.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <form class="mt-4 mb-3 d-md-none">
+        <div class="input-group input-group-rounded input-group-merge">
+          <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="fa fa-search"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- Navigation  MODIFFFF-->
+      <app-navbar-admin></app-navbar-admin>
+      <!-- Divider -->
+      <!-- Heading -->
+      <!-- Navigation -->
+
+    </div>
+  </div>
+</nav>
+<div class="main-content">
+  <!-- Navbar -->
+
+
+  <div class="header bg-orange pb-8 pt-5 pt-md-8">
+  </div>
+
+  <div>
+
+    <!--SEARCH -->
+    <div class="col-xs-3" class="form-group" style="margin-top:10px">
+        <input class="form-control" id="ex2" type="text" class="form-control" placeholder="recherches les utilisateurs"  [(ngModel)]="term" name="term">
+    </div>
+<!--TABLE BEGIN-->
+
+
+    <div class="row mt-5">
+      <div class="col">
+        <div class="card bg-default shadow">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="text-white mb-0" >Users table</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-dark table-flush">
+              <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i  (click)="sort('Username')"   class="fa-solid fa-sort"></i>Username</th>
+                <th scope="col"><i  (click)="sort('Nom')"   class="fa-solid fa-sort"></i>Nom</th>
+                <th scope="col"><i  (click)="sort('Prenom')"   class="fa-solid fa-sort"></i>Prenom</th>
+                <th scope="col"><i  (click)="sort('Email')"   class="fa-solid fa-sort"></i>Email</th>
+                <th scope="col">Actions</th>
+           <!--      <th scope="col">Role</th> -->
+                <th scope="col"></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let e of user |filter:term| orderBy :orderHeader : isDescOrder;index as i">
+                <td>{{i+1}}</td>
+                <td>
+                  {{e.userName}}
+                </td>
+                <td>
+                  {{e.nom}}
+                </td>
+                <td>
+                 {{e.prenom}}
+                </td>
+                <td>
+                  {{e.email}}
+                </td>
+                <td>
+                <button class="btn btn-success btn-sm" ><i class="fa fa-edit" id="edit"    aria-hidden="true"></i></button>
+                <button class="btn btn-danger btn-sm" (click)="deleteUser(e.userName)" ><i class="fa fa-trash" id="delete"   aria-hidden="true"></i></button>
+                </td>
+
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Pagination -->
+    <nav aria-label="Page navigation example" style="margin-top:10px">
+      <ul class="pagination"  >
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">
+            <i class="fa fa-angle-left"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let p of pages;let i =index">
+          <a class="page-link" href="#" (click)="setPage(i,$event)">{{i}}</a></li>
+        <li class="page-item disabled">
+          <a class="page-link" href="#">
+            <i class="fa fa-angle-right"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--TABLE END-->
+    <button type="button" class="btn btn-info" style="margin-top: 10px;margin-left:10px;width:25%" routerLink="/addUsers"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 10px"></i>Ajouter utilisateur</button>
+
+
+
+
+  </div>
+
+</div>
+
+</body>

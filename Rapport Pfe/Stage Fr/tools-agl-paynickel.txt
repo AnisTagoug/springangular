@@ -1,0 +1,50 @@
+1. Versioning tools :
+- https://about.gitlab.com/
+- https://bitbucket.org/
+
+2. Creating UML Diagram P$w-2018?*_+
+
+- http://www.umlet.com/umletino/umletino.html
+- http://www.umlet.com
+- http://dia-installer.de/download/index.html
+
+3. Continuous Integration and deployment
+
+- https://www.openshift.com/
+- https://www.ansible.com/
+- https://www.docker.com/
+- https://www.vagrantup.com/docs/getting-started/
+
+4. Integrate Development Environment
+
+- http://www.eclipse.org/che/
+- https://www.jetbrains.com/phpstorm/
+
+5. Project management platform
+- https://trello.com/
+- https://www.tuleap.org/
+- https://www.openproject.org/
+- http://www.redmine.org/
+- http://semver.org/lang/fr/
+
+
+
+6. Operating System
+
+- dev : Unix/Debian/Centos
+- prod: Unix/Debian/Centos
+- preprod: Unix/Debian/Centos
+
+7. Architecture 
+- ?
+
+8. API Paypal
+
+https://checkout.paypal.com/pwpp/2.24.1/html/braintree-frame.html#d57ea63a-3ba7-47b0-b6cb-e9bce49eb276
+
+http://www.paylib.fr/e-commercant/
+
+http://www.paylib.fr/commercant/
+http://www.paylib.fr/particulier/
+
+Paylib == payall

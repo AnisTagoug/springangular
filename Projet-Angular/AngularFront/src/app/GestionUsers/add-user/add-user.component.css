@@ -1,0 +1,18 @@
+label{
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+input{
+  width: 600px;
+  border-bottom: 2px solid orange;
+  font-size: 13px;
+
+
+
+}
+form{
+  margin-left:20%;
+
+}

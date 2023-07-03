@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}MonsterPlay{% endblock %}</title>
+    <meta name="description" content="MonsterPlay - Superpower for Gaming Websites">
+    <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack">
+    <meta name="author" content="nK">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.minc420.css?v=5.1.3') }}"/>
+
+        <link rel="stylesheet" href="{{ asset('assets/vendor/swiper/swiper-bundle.min7316.css?v=6.8.2') }}"/>
+
+        <link rel="stylesheet" href="{{ asset('assets/vendor/fancybox/dist/jquery.fancybox.min438f.css?v=3.5.7') }}"/>
+
+        <link rel="stylesheet" href="{{ asset('assets/vendor/slider-revolution/css/settings4ed6.css?v=5.4.8') }}">
+        <link rel="stylesheet" href="{{ asset('assets/vendor/slider-revolution/css/layers4ed6.css?v=5.4.8') }}">
+        <link rel="stylesheet" href="{{ asset('assets/vendor/slider-revolution/css/navigation4ed6.css?v=5.4.8') }}">
+
+        <link rel="stylesheet" href="{{ asset('assets/css/monsterplay.min9f1e.css?v=1.1.0') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+
+        <link rel="stylesheet" href="{{ asset('assets/css/custom9f1e.css?v=1.1.0') }}">
+
+
+        <script src="{{ asset('assets/vendor/jquery/dist/jquery.min45e0.js?v=3.6.0') }}"></script>
+
+        <script src="{{ asset('assets/js/preloader.min9f1e.js?v=1.1.0') }}"></script>
+    {% endblock %}
+</head>
+<body>
+
+<div class="mpl-preloader">
+    <div class="mpl-preloader-content">
+        <div class="mpl-preloader-title display-1 h1">MonsterPlay</div>
+        <div class="mpl-preloader-progress">
+            <div></div>
+        </div>
+    </div>
+</div>
+<div class="mpl-preloader-bg"></div>
+
+<nav class="mpl-navbar-top mpl-navbar">
+    <div class="mpl-navbar-mobile-overlay"></div>
+    <div class="container mpl-navbar-container">
+        <a href="#" class="mpl-navbar-toggle"></a>
+        <div class="mpl-navbar-brand">
+            <a href="#">
+                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+            </a>
+        </div>
+        <div class="mpl-navbar-content">
+            <ul class="mpl-navbar-nav">
+                <li class="mpl-dropdown">
+                    <a href="#" class="mpl-nav-link" role="button">
+                        <span class="mpl-nav-link-name"> Shop </span>
+                    </a>
+                    <div class="mpl-dropdown-menu">
+                        <ul class="mpl-navbar-nav">
+                            <li class="mpl-dropdown">
+                                <a href="#" class="mpl-nav-link" role="button">
+                                    <span class="mpl-nav-link-name"> Products List </span>
+                                </a>
+                                <div class="mpl-dropdown-menu">
+                                    <ul class="mpl-navbar-nav">
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name"> Right Sidebar </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name"> Left Sidebar </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name"> No Sidebar </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Single Product </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Cart </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Checkout </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mpl-navbar-nav mpl-navbar-right">
+                <li class="mpl-dropdown">
+                    <a href="#" class="mpl-nav-link" role="button">
+<span class="mpl-nav-link-name"> s1mple<span class="badge badge-brand">8</span>
+</span>
+                    </a>
+                    <div class="mpl-dropdown-menu">
+                        <ul class="mpl-navbar-nav">
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Activity </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Profile </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+<span class="mpl-nav-link-name"> Messages<span class="badge badge-brand">8</span>
+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Settings </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name"> Log Out </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="mpl-nav-link" href="#" data-fancybox data-src="#popup-search" data-touch="false"
+                       data-small-btn="false" data-toolbar="false" data-close-existing="true" data-auto-focus="true">
+                        <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mpl-dropdown mpl-dropdown-user">
+                    <a href="#" class="mpl-nav-link" role="button">
+                        <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"/>
+                        </svg>
+                    </a>
+                    <div class="mpl-dropdown-menu">
+                        <form class="mpl-navbar-login-form" action="#" method="post">
+                            <div class="row hgap-sm vgap-sm align-items-center">
+                                <div class="col-12">
+                                    <label for="nav_username">Username:</label><input
+                                            class="form-control form-control-sm" type="text" id="nav_username"
+                                            name="username" placeholder="Username"><span class="form-control-bg"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label for="nav_password">Password:</label><input
+                                            class="form-control form-control-sm" type="text" id="nav_password"
+                                            name="password" placeholder="Password"><span class="form-control-bg"></span>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="nav_rememberme"
+                                               name="rememberme"><label class="form-check-label" for="nav_rememberme">Remember
+                                            Me</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#" class="small">Lost Password</a>
+                                </div>
+                                <div class="col-12">
+                                    <a href="#" class="btn btn-block btn-default">Log in</a>
+                                </div>
+                                <div class="col-12 small"> Are you new? <a href="#">Sign Up</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="mpl-navbar mpl-navbar-mobile">
+    <div class="mpl-navbar-container">
+        <div class="mpl-navbar-head">
+            <a href="#" class="mpl-navbar-brand">
+                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+            </a>
+            <a href="#" class="mpl-navbar-toggle">
+                <span></span><span></span><span></span><span></span>
+            </a>
+        </div>
+        <div class="mpl-navbar-body">
+            <ul class="mpl-navbar-nav">
+                <li>
+                    <a href="#" class="mpl-nav-link mpl-nav-link-collapse mpl-collapsed"
+                       role="button">
+                        <span class="mpl-nav-link-name">Shop</span>
+                    </a>
+                    <div class="mpl-navbar-collapse collapse">
+                        <ul class="mpl-navbar-nav">
+                            <li>
+                                <a href="#"
+                                   class="mpl-nav-link mpl-nav-link-collapse mpl-collapsed" role="button">
+                                    <span class="mpl-nav-link-name">Products List</span>
+                                </a>
+                                <div class="mpl-navbar-collapse collapse">
+                                    <ul class="mpl-navbar-nav">
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name">Right Sidebar </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name">Left Sidebar </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mpl-nav-link">
+                                                <span class="mpl-nav-link-name">No Sidebar </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Single Product </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Cart </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Checkout </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="mpl-nav-link mpl-nav-link-collapse mpl-collapsed" role="button">
+                        <span class="mpl-nav-link-name">s1mple<span class="badge badge-brand">8</span></span>
+                    </a>
+                    <div class="mpl-navbar-collapse collapse">
+                        <ul class="mpl-navbar-nav">
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Activity </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Profile </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+<span class="mpl-nav-link-name">Messages<span class="badge badge-brand">8</span>
+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Settings </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mpl-nav-link">
+                                    <span class="mpl-nav-link-name">Log Out </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mpl-navbar-footer">
+            <ul class="mpl-navbar-nav">
+                <li>
+                    <a class="mpl-nav-link" href="#" data-fancybox data-src="#popup-search" data-touch="false"
+                       data-small-btn="false" data-toolbar="false" data-close-existing="true" data-auto-focus="true">
+                        <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="mpl-nav-link" href="#" data-fancybox data-src="#popup-cart" data-touch="false"
+                       data-small-btn="false" data-toolbar="false" data-close-existing="true" data-auto-focus="false">
+                        <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1H5L7.68 14.39M7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6L7.68 14.39ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="mpl-nav-link" href="#" data-fancybox data-src="#popup-signin" data-touch="false"
+                       data-small-btn="false" data-toolbar="false" data-close-existing="true" data-auto-focus="true">
+                        <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="content-wrap">
+    <div class="mpl-navbar-mobile-overlay"></div>
+    <div>
+        {% block body %}
+        {% endblock %}
+    </div>
+</div>
+
+{% block js %}
+    <script src="{{ asset('assets/vendor/object-fit-images/dist/ofi.mind3bb.js?v=3.2.4') }}"></script>
+
+    <script src="{{ asset('assets/vendor/%40popperjs/core/dist/umd/popper.min590d.js?v=2.11.0') }}"></script>
+
+    <script src="{{ asset('assets/vendor/scrollreveal/dist/scrollreveal.minbc3e.js?v=4.0.9') }}"></script>
+
+    <script src="{{ asset('assets/vendor/animejs/lib/anime.minf77b.js?v=3.2.1') }}"></script>
+
+    <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.minc420.js?v=5.1.3') }}"></script>
+
+    <script src="{{ asset('assets/vendor/jarallax/dist/jarallax.min5fab.js?v=1.12.8') }}"></script>
+
+    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min7316.js?v=6.8.2') }}"></script>
+
+    <script src="{{ asset('assets/vendor/fancybox/dist/jquery.fancybox.min438f.js?v=3.5.7') }}"></script>
+
+    <script src="{{ asset('assets/vendor/jquery-countdown/dist/jquery.countdown.mind1f1.js?v=2.2.0') }}"></script>
+
+    <script src="{{ asset('assets/vendor/moment/min/moment.min63eb.js?v=2.29.1') }}"></script>
+    <script src="{{ asset('assets/vendor/moment-timezone/builds/moment-timezone-with-data.minc112.js?v=0.5.34') }}"></script>
+
+    <script src="{{ asset('assets/vendor/slider-revolution/js/jquery.themepunch.tools.min4ed6.js?v=5.4.8') }}"></script>
+    <script src="{{ asset('assets/vendor/slider-revolution/js/jquery.themepunch.revolution.min4ed6.js?v=5.4.8') }}"></script>
+
+    <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.mine781.js?v=4.1.4') }}"></script>
+
+    <script src="{{ asset('assets/vendor/isotope-layout/dist/isotope.pkgd.minaf3e.js?v=3.0.6') }}"></script>
+
+    <script src="{{ asset('assets/vendor/ion-rangeslider/js/ion.rangeSlider.min7317.js?v=2.3.1') }}"></script>
+
+    <script src="{{ asset('assets/vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.mine0a5.js?v=4.3.0') }}"></script>
+
+    <script src="{{ asset('assets/vendor/bootstrap-validator/dist/validator.minfb28.js?v=0.11.9') }}"></script>
+
+    <script src="{{ asset('assets/js/monsterplay.min9f1e.js?v=1.1.0') }}"></script>
+    <script src="{{ asset('assets/js/monsterplay-init9f1e.js?v=1.1.0') }}"></script>
+{% endblock %}
+
+</body>
+</html>

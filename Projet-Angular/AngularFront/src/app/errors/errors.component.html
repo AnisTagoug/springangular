@@ -1,0 +1,9 @@
+<div *ngIf="validator.invalid">
+  <div *ngIf="validator.errors?.['required']">
+    <span class="badge text-bg-danger">le champ nom universite est required</span>
+
+  </div>
+  <div *ngIf="validator.errors?.['minlength']">
+    <span class="badge text-bg-danger">  Minimum 8 lettres</span>
+      </div>
+  </div>
